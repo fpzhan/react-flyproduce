@@ -2,7 +2,7 @@
   "name": "react-flyproduce",
   "version": "0.1.1",
   "private": false,
-  "description": "react-flyproduce是对生成js代码进行调用的一个插件，配合代码生成网站(www.flyproduce.com)可以进行快速开发。更多详细请看插件介绍",
+  "description": "react-flyproduce是对生成js代码进行调用的一个插件，配合代码生成网站( www.flyproduce.com )可以进行快速开发。更多详细请看插件介绍",
   "main": "lib/index.js",
   "license": "MIT",
   "author": "付鹏展",

@@ -88,7 +88,7 @@ class flyProduce extends React.Component {
                 totalPath:String,
                 currentName: String,
                 sizeName: String,
-                flyproduceRef:String,
+                flyProduceRef:String,
                 belongComponent:Object
         }
         debugger
@@ -238,7 +238,7 @@ class flyProduce extends React.Component {
     //发起ajax请求
     action() {
         var current = this;
-        if (current.getProps("flyproduceRef")) {
+        if (current.getProps("flyProduceRef")) {
             current.getProps("input")[
                 current.getProps("currentName")
                 ] = current.getProps("pageValue");
