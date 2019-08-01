@@ -1,4 +1,4 @@
 {
-  "presets": ["react","es2015"],
+  "presets": [["minify",{"removeConsole": true,"removeDebugger": true,"removeUndefined": false}],"react","es2015"],
   "plugins": ["transform-react-jsx"]
 }

@@ -1,4 +1,3 @@
-const weight = Symbol('weight');
 class FlyInterface{
   constructor(obj){
     if (this.isObject(obj)) {

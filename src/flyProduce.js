@@ -13,7 +13,7 @@ function contains(a, obj) {
     return false;
 }
 
-class flyProduce extends React.Component {
+class FlyProduce extends React.Component {
     /**
      * props={
      *       flyAction: Object,
@@ -326,4 +326,8 @@ class flyProduce extends React.Component {
 }
 
 
-export default flyProduce;
+module.exports={
+    FlyEntity,
+    FlyInterface,
+    FlyProduce
+}
