@@ -1,0 +1,56 @@
+{
+  "name": "react-flyproduce",
+  "version": "0.1.1",
+  "private": false,
+  "description": "react-flyproduce是对生成js代码进行调用的一个插件，配合代码生成网站(www.flyproduce.com)可以进行快速开发。更多详细请看插件介绍",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "付鹏展",
+  "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-istanbul": "^2.0.1",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.24.1",
+    "jquery": "^3.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "keywords": [
+    "react",
+    "react-flyproduce",
+    "produce",
+    "fly",
+    "flyproduce"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fpzhan/react-flyproduce.git"
+  },
+  "scripts": {
+    "build": " babel  src --out-dir lib"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
