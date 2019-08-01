@@ -22,6 +22,18 @@ class FlyEntity {
     debugger
     if (this.isObject(obj)) {
       for (var key in obj) {
+        if(this.infos["set"+this.upCaseFirst(key)]===undefined ){
+          this.infos["set"+this.upCaseFirst(key)]=function(e){
+            if(e && e.target && e.target.value){
+              param[key]=e.target.value;
+              this.setState(this);
+            }else if(e){
+              param[key]=e.target.value;
+              this.setState(this);
+            }
+
+          }
+        }
         this.infos[key] = obj[key];
       }
     }
