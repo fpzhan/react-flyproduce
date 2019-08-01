@@ -160,7 +160,7 @@ class flyProduce extends React.Component {
                 this.setVal(mData, mVal, list);
                 list.pop();
             }
-        } else {
+        } else if(typeof val !=="function" && typeof data !=="function"){
             eval(dataStr + "=" + valStr);
         }
     }

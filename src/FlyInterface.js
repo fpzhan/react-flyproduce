@@ -50,10 +50,10 @@ class FlyInterface{
   };
 
   flyProduceAction(){
-    this.infos.flyproduceRef &&
+    this.infos.flyProduceRef &&
     this.infos.belongComponent &&
-    this.infos.belongComponent.refs[this.infos.flyproduceRef] &&
-    this.infos.belongComponent.refs[this.infos.flyproduceRef].action();
+    this.infos.belongComponent.refs[this.infos.flyProduceRef] &&
+    this.infos.belongComponent.refs[this.infos.flyProduceRef].action();
   }
 
   flyChangePage (page) {
