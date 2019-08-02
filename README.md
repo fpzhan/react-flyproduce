@@ -14,7 +14,7 @@
 或者直接下载[百度网盘](https://pan.baidu.com/s/1hm7GoZyG9e30oZ5Smptm_w) 提取码：fd0u
 ### github地址
 ```
-https://github.com/fpzhan/vue-flyproduce.git
+https://github.com/fpzhan/react-flyproduce.git
 ```
 
 ### vue-flyproduce使用api
