@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-flyproduce
 
-## Available Scripts
 
-In the project directory, you can run:
+### 插件介绍
+   react-flyproduce插件，是flyproduce代码生成器的一部分。登录[flyproduce网站](http://www.flyproduce.com)，生成后端java代码(可以选择性的使用swagger2,mybatis-plus技术)，以及前端react代码，各种自定义文档。然后使用react-flyproduce插件(同时实现了双向数据绑定，没有采用监听机制，不会影响react的高性能)，可以简单明了的实现对服务器的请求。使html与javascript具有极低的耦合度。对于大中小型公司，页面样式频繁切换和快速开发程序提供了极大帮助。
+ 
+### 插件使用建议
+   利用[flyproduce网站](http://www.flyproduce.com)和react-flyprodce插件，已经可以快速生成java代码和javascript中请求服务器代码。如果html代码也能快速生成，那你开发程序的速度将会非常非常快速。最后只需将html和javascript进行简单绑定即可。
+   
+   html页面的生成，有许多工具可以使用，比如：拖拽生成html页面的网站，人工智能扫描ui原型生成html页面。
+   
+### 教程
+[flyproduce网站](http://www.flyproduce.com)中有详细的视频教程以及图文教程。
+或者直接下载[百度网盘](https://pan.baidu.com/s/1hm7GoZyG9e30oZ5Smptm_w) 提取码：fd0u
+### github地址
+```
+https://github.com/fpzhan/react-flyproduce.git
+```
 
-### `npm start`
+### vue-flyproduce使用api
+url: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接口请求路径（必填）
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+input: Object &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查询参数
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+output: Object &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回结果
 
-### `npm test`
+success: Function &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查询成功回调行数
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+error: Function &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查询失败回调行数
 
-### `npm run build`
+contentType: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ajax请求contentType头信息
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+submitId: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;触发查询节点的id
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+inputClear: Boolean &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查询完参数是否清空query
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+init: Boolean &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是否页面加载完成之后就进行初始化
 
-### `npm run eject`
+paginationRef: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vuetable分页插件ref名称
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+pageValue: Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前第几页的值
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+size: Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每页多少条数据
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+pages: Number  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回的总页数 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+total: Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回的数据总数
 
-## Learn More
+statusPath: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回状态参数路径(暂时只支持一级路径)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+totalPath: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回总数据路径(暂时只支持一级路径)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+currentName: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求第几页传入参数名
 
-### Code Splitting
+sizeName: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每页多少条数据参数名
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+dataPath: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回数据路径(暂时只支持一级路径)
 
-### Analyzing the Bundle Size
+pagesPath: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回总页数路径(暂时只支持一级路径)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+currentPath: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回当前第几页路径(暂时只支持一级路径)
 
-### Making a Progressive Web App
+submitEvent: String &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绑定submitId节点的事件名称，例如：click
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+flyproduceRef:String  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前flyproduce Dom ref属性值(必填,与belongComponent一起使用实现双向数据绑定)
 
-### Advanced Configuration
+belongComponent:Object  &nbsp;&nbsp;当前react类(必填,与flyproduceRef一起使用实现双向数据绑定)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+支持jquery ajax 所有参数，可参考[w3school ajax教程](http://www.w3school.com.cn/jquery/ajax_ajax.asp)
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
