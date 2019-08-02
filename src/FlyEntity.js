@@ -21,8 +21,10 @@ class FlyEntity {
   InitInfos(obj) {
     debugger
     if (this.isObject(obj)) {
+      debugger
       for (var key in obj) {
         if(this.infos["set"+this.upCaseFirst(key)]===undefined ){
+          var param=this.infos;
           this.infos["set"+this.upCaseFirst(key)]=function(e){
             if(e && e.target && e.target.value){
               param[key]=e.target.value;
