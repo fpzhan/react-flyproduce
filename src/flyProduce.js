@@ -68,29 +68,29 @@ class FlyProduce extends React.Component {
                 "xhr"
             ]
         };
-        this.props={
-                flyAction: Object,
-                url: String,
-                input: Object,
-                output: Object,
-                success: Function,
-                error: Function,
-                contentType: String,
-                submitId: String,
-                inputClear: Boolean,
-                init: Boolean,
-                paginationRef: String,
-                pageValue: Number,
-                size: Number,
-                pages:Number,
-                total:Number,
-                statusPath:String,
-                totalPath:String,
-                currentName: String,
-                sizeName: String,
-                flyProduceRef:String,
-                belongComponent:Object
-        }
+        // this.props={
+        //         flyAction: Object,
+        //         url: String,
+        //         input: Object,
+        //         output: Object,
+        //         success: Function,
+        //         error: Function,
+        //         contentType: String,
+        //         submitId: String,
+        //         inputClear: Boolean,
+        //         init: Boolean,
+        //         paginationRef: String,
+        //         pageValue: Number,
+        //         size: Number,
+        //         pages:Number,
+        //         total:Number,
+        //         statusPath:String,
+        //         totalPath:String,
+        //         currentName: String,
+        //         sizeName: String,
+        //         flyProduceRef:String,
+        //         belongComponent:Object
+        // }
         debugger
 
     }
@@ -160,8 +160,13 @@ class FlyProduce extends React.Component {
                 this.setVal(mData, mVal, list);
                 list.pop();
             }
-        } else if(typeof val !=="function" && typeof data !=="function"){
-            eval(dataStr + "=" + valStr);
+        } else if(  typeof val !=="function" && typeof data !=="function"){
+            if(typeof val !== "undefined"){
+                eval(dataStr + "=" + valStr);
+            }else{
+                eval(dataStr+"=''")
+            }
+
         }
     }
     //全局props取值
@@ -215,7 +220,13 @@ class FlyProduce extends React.Component {
                 this.setVal(this.props.flyAction.infos[str].infos, val);
             } else if(typeof this.props.flyAction.infos[str]==="string" || typeof this.props.flyAction.infos[str]==="number"){
                 this.props.flyAction.infos[str]=val;
-            }else{
+            }else if(val===undefined){
+                if(this.props.flyAction.infos[str] instanceof Array){
+                    this.setVal(this.props.flyAction.infos[str], []);
+                }else if(typeof this.props.flyAction.infos[str] == "object"){
+                    this.setVal(this.props.flyAction.infos[str], {});
+                }
+            } else{
                 this.setVal(this.props.flyAction.infos[str], val);
             }
         }
